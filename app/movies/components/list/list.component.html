@@ -1,0 +1,32 @@
+<div class="row p-5" *ngIf="!movies">
+    <div class="alert alert-danger text-center" role="alert">
+        Realiza una busqueda
+    </div>
+</div>
+
+
+
+
+<div class="row p-3" *ngIf="movies">
+    <div class="col-lg-4">
+        <div class="card" style="width: 18rem;"  >
+            <img src="{{ movies.Poster }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">
+                    {{movies.Title}}
+                </h5>
+                <p class="text-muted">{{movies.Year}}</p>
+                <p class="card-text">Descripcion</p>
+                <h2>Raitings</h2>
+                <p>Source: {{movies.Ratings[0].Source}}</p>
+                <p>Value: {{movies.Ratings[0].Value}}</p>
+                <a  [routerLink]="['/movie', movies.Title]" class="btn btn-primary">Ver Pelicula</a>
+
+            </div>
+        </div>
+    </div>
+  </div>
+  
+  
+  
+  

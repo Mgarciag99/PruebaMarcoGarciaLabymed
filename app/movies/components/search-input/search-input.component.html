@@ -1,0 +1,27 @@
+<br>
+<div class="search-input-content">
+    <div class="col-lg-12">
+        <form class="row" #myForm="ngForm" (ngSubmit)="search(myForm.value)">
+            <div class="col-auto">
+                <label for="inputPassword2" class="visually-hidden">Titulo de la Pelicula</label>
+                <input type="text" class="form-control" name="title" id="title" [(ngModel)]="title" placeholder="Titulo de la Pelicula">
+            </div>
+            <div class="col-auto">
+              <label for="inputPassword2" class="visually-hidden" >Anio de Lanzamiento</label>
+              <input type="text" class="form-control"name="anio" id="anio" [(ngModel)]="anio" placeholder="Anio de lanzamiento">
+            </div>
+            <div class="col-auto">
+              <button type="submit" class="btn btn-primary">Buscar</button>
+            </div>
+        </form>
+    </div>
+</div>
+<hr>
+<!-- {{movies.Title}} -->
+
+<div></div>
+<app-list [movies]="movies"></app-list>
+
+
+
+
